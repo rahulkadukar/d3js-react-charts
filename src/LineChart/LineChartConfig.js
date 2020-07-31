@@ -14,7 +14,7 @@ const generateData = (n) => {
   for (let i = 0; i < n; ++i) {
     data.push({
       k: d.toISOString().slice(0,10),
-      v: i + Math.floor(Math.random() * 205)
+      v: i + Math.floor(Math.random() * 2025)
     })
     d.setTime(d.getTime() + (864e2 * 1e3))
   }

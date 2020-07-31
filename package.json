@@ -1,6 +1,6 @@
 {
   "name": "d3js-react-charts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React charts created with D3.js",
   "author": "Rahul Kadukar",
   "license": "MIT",

@@ -66,8 +66,7 @@ export const LineChart = (props) => {
 
     const xAxisBrush = d3axisBottom(opts._xScaleSliding)
     const yAxisBrush = d3axisLeft(opts._yScaleSliding)
-      .tickValues(opts._yScaleSliding.ticks(1).concat(opts._yScaleSliding.domain()))
-      //.tickValues([0, (d3extent(opts._data.map((r) => r.v)).slice(-1))])
+      .tickValues(opts._yScaleSliding.domain())
 
     const g = svg.append("g")
       .attr("width", opts._innerWidth)
@@ -209,6 +208,7 @@ export const LineChart = (props) => {
       .attr("width", opts._innerWidth)
       .attr("height", opts._innerHeight)
       .attr("transform", `translate(${opts._margin.left}, ${opts._margin.top + opts._titleHeight})`)
+      .style("color", `${theme === 'dark' ? 'white' : 'black'}`)
 
     g.append('g')
       .call(yAxis)
