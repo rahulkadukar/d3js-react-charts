@@ -1,11 +1,13 @@
 import React from 'react'
 
-import { LineChart } from 'd3js-react-charts'
+import { NavBar } from './Components/Navbar'
+import { LineChartDoc } from './Documentation/LineChartDoc'
 
 const App = () => {
   return (
     <div>
-      <LineChart text="Create React Library Example 😄" />
+      <NavBar><span>D3 charts in React</span></NavBar>
+      <LineChartDoc />
     </div>
   )
 }

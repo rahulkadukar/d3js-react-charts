@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react'
+import React, { memo, useEffect, useRef } from 'react'
 // @ts-ignore
 import {
   d3axisBottom,
@@ -26,7 +26,7 @@ config.docs.forEach((p) => {
   defaultConfig[p.name] = p.value
 })
 
-export const LineChart = (props) => {
+const LineChartD3 = (props) => {
   const opts = Object.assign({}, defaultConfig, props.config)
   const node = useRef(null)
   const snode = useRef(null)
@@ -82,7 +82,7 @@ export const LineChart = (props) => {
 
     g.append('g')
       .call(yAxisBrush)
-      .style("font-size", "1em")
+      .style("font-size", "1.2em")
       .attr("transform", `translate(${opts._margin.left + opts._yAxisWidth}, 0)`)
       .style("font-family", "Roboto")
       .style("color", `${theme === 'dark' ? 'white' : 'black'}`)
@@ -292,3 +292,5 @@ export const LineChart = (props) => {
   )
 }
 
+export const LineChart = memo(LineChartD3)
+export const LineChartConfig = config

@@ -4,7 +4,7 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 ![Node](https://img.shields.io/badge/node-v12.18.3-yellow)
 ![React](https://img.shields.io/badge/react-v16.9.0-blue)
-[Styled Components](https://img.shields.io/badge/styled--components-v4.4.1-orange)
+![Styled Components](https://img.shields.io/badge/styled--components-v4.4.1-orange)
 ![TypeScript](https://img.shields.io/badge/typescript-v3.7.5-blue)
 
 [Live link](https://rahulkadukar.github.io/d3js-react-charts/)
