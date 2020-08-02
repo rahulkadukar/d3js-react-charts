@@ -1,4 +1,5 @@
 import React, {useEffect, useRef} from 'react'
+// @ts-ignore
 import {
   d3axisBottom,
   d3axisLeft,
@@ -13,9 +14,10 @@ import {
   d3scaleUtc,
   d3select,
   d3timeDay
-} from '../D3Config/D3Config'
+} from "../D3Config/D3Config.js"
 
 /* Import all configuration from LineChartConfig */
+// @ts-ignore
 import {config, data as defaultData} from './LineChartConfig'
 
 /* Default configuration */
@@ -62,7 +64,7 @@ export const LineChart = (props) => {
       .attr("height", opts.slidingWindowHeight)
 
     opts._slidingSVG = svg
-    updateBrush(svg)
+    updateBrush(svg, 0, 0)
 
     const xAxisBrush = d3axisBottom(opts._xScaleSliding)
     const yAxisBrush = d3axisLeft(opts._yScaleSliding)
@@ -110,6 +112,7 @@ export const LineChart = (props) => {
       const lineData = data.filter((r) => {
         const rk = new Date(r.k)
         if (rk >= startTstmp && rk <= endTstmp) return true
+        return false
       })
 
       opts._currData = lineData
@@ -126,6 +129,7 @@ export const LineChart = (props) => {
       const lineData = data.filter((r) => {
         const rk = new Date(r.k)
         if (rk >= startTstmp && rk <= endTstmp) return true
+        return false
       })
 
       if (lineData.length <= 3) {
